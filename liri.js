@@ -9,12 +9,18 @@ var client = new twitter({
 
 var myTweets = process.argv[2];
 
-var params = {screen_name: 'klaw1387'};
-client.get('statuses/user_timeline', params, function(error, tweets, response) {
+// var params = {screen_name: 'klaw1387'};
+client.get('statuses/user_timeline', myTweets, function(error, tweets, response) {
   if (!error) {
     console.log(tweets);
   }
 });
+
+twitter.writeFile("log.txt", "Hey there!", function(err) {
+	if(!err) {
+		console.log("The file was saved!")
+	}
+})
 
 // client.get('search/tweets', {q: '@klaw1387'}, function(error, tweets, response) {
 //    console.log(tweets);
