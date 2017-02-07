@@ -1,0 +1,5 @@
+Ignore these files in the Repo
+
+node_modules
+.DS-Store
+
