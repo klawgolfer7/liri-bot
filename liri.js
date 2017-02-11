@@ -14,7 +14,7 @@ var getMyTweets = function() {
   // var client = Twitter(keys.twitterKeys)
 
   var params = {
-    screen_name: "kellykolarsick" 
+    screen_name: "klaw1387" 
   };
 
   client.get("statuses/user_timeline", params, function(error, tweets, response) {
